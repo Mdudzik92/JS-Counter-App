@@ -26,8 +26,11 @@ incrementEl.addEventListener("click", function () {
 
 // When the user clicks the decrement button...
 decrementEl.addEventListener("click", function () {
-	// The number of that button goes down by one...
-	count--;
-	// And the first function is run to change the number on the HTML.
-	setCounterText();
+	// Adding a conditional to only allow this to work if the count is greater than 0, effectively stopping the decrement from going negative.
+	if (count > 0) {
+		// The number of that button goes down by one...
+		count--;
+		// And the first function is run to change the number on the HTML.
+		setCounterText();
+	}
 });
